@@ -10,6 +10,6 @@ class GenerationTest {
     @Test
     void generate() {
         Generation generation  = new Generation();;
-        generation.generate(1000000);
+        generation.generate(15);
     }
 }

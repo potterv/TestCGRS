@@ -24,15 +24,18 @@ public class Generation {
     //    Метод для генерации 5 - ти последовательностей простых чисел
     public void generate(int length) {
         int[] one = new int[length];
+        List<Integer>  list = new ArrayList<>();
         if (length >= 1) one[0] = 2;
         int l = 1;
         for (int k = 3; k < length; k += 2) {
 //            if (k>MIN && k<MAX)
-            if (isPrime(k)) one[l] = k;
+            if (isPrime(k)) list.add(k);
+//                one[l] = k;
             l++;
         }
 
-        Arrays.stream(one).forEach(System.out::println);
+//        Arrays.stream(one).forEach(System.out::println);
+        list.stream().forEach(System.out::println);
 
     }
 

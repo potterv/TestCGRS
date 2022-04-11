@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Сервис генерации случайных последовательностей</title>
+    <link rel="stylesheet" type="text/css" th:href="@{css/style.css}">
+</head>
+<body>
+<div id="roof">
+
+    <div id="menu">
+        <ul class = "menu">
+            <li ><a href="#">Главная</a></li>
+            <li ><a href="#">Задачи</a></li>
+            <li ><a href="#">О проекте</a></li>
+        </ul>
+    </div>
+    <div class="name">
+        <h3>Сервис генерации случайных последовательностей</h3>
+    </div>
+</div>
+
+<div id="content">
+    <div class="description">
+
+    </div>
+    <div class="input">
+        <label> Введите длину последовательности от 10 до 100</label>
+        <form>
+            <input type="number" placeholder="000" pattern="[0-9]{3}"  maxlength="3"
+                   autofocus="autofocus" required="required"
+                   min="10" max="100"
+            >
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+</div>
+</body>
+</html>

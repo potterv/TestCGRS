@@ -1,0 +1,47 @@
+.name h3{
+font-weight: bold;
+margin: 50px 50px 75px 100px;
+position:absolute; top:80px; left:center;
+color: #003;
+}
+
+#menu{
+margin: 0;
+padding:0;
+list-styl-type:none;
+border:2px solid #0066FF;
+border-radius: 20px 5px;
+width: 750px;
+text-aligen: center;
+background-color:#33adff;
+}
+#menu li{
+display:inline;
+width:100px;
+}
+#menu a{
+color: fff;
+padding 5px 10px;
+text-decoration: none;
+font-weight:bold;
+display:inline-block;
+width:100px;
+}
+#menu a:hover{
+border-radiuse:20px 5px;
+background-color:#0066ff;
+}
+
+.input {
+margin-top: 70px;
+padding-top: 50px;
+
+}
+.input label{
+margin-bottom:50px;
+padding-bottom:100;
+}
+
+#content{
+position:absolute; top:50px; left:center;
+}
