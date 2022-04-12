@@ -3,6 +3,8 @@ package ru.sev.gonchar;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class Generation {
     //    Константное знаяение количество последовательностей
@@ -27,7 +29,7 @@ public class Generation {
         List<Integer>  list = new ArrayList<>();
         if (length >= 1) one[0] = 2;
         int l = 1;
-        for (int k = 3; k < length; k += 2) {
+        for (int k = 10; k < 100; k += 2) {
 //            if (k>MIN && k<MAX)
             if (isPrime(k)) list.add(k);
 //                one[l] = k;
@@ -43,6 +45,13 @@ public class Generation {
         for (int i = 3; i * i <= k; i += 2)
             if (k % i == 0) return false;
         return true;
+    }
+
+    public void gen(){
+        List intList = new Random().ints(10,10,100)
+                .boxed()
+                .collect(Collectors.toList());
+        System.out.println(intList);
     }
 
 }
