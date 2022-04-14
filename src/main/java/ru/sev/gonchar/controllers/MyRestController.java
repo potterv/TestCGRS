@@ -1,29 +1,29 @@
 package ru.sev.gonchar.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ru.sev.gonchar.generations.Generation;
+
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @RestController
-@RequestMapping
 public class MyRestController {
 
-//    @GetMapping("/api/res")
-    @RequestMapping(method = RequestMethod.GET, path = "/api/res")
+//@Autowired
+//    GenerateService generateService;
+
+    @RequestMapping(method = RequestMethod.GET, path = "/api")
     public ResponseEntity api() {
-        List<Integer> integers = new ArrayList<>();
-        for (int i=0; i<=10; i++){
-            integers.add(i);
-        }
-        return ResponseEntity.ok(integers);
+        Generation generation = new Generation();
+        generation.setLength(10);
+
+        return ResponseEntity.ok(generation.getSequence());
     }
 
-    @RequestMapping(method = RequestMethod.PUT, path = "/api/res/length/{id}")
-    public int apiLength(@PathVariable int length) {
-        System.out.println(length);
-        return (length);
-    }
+
 }
