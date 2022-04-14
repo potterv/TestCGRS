@@ -9,10 +9,10 @@
 <div id="roof">
 
     <div id="menu">
-        <ul class = "menu">
-            <li ><a href="#">Главная</a></li>
-            <li ><a href="#">Задачи</a></li>
-            <li ><a href="#">О проекте</a></li>
+        <ul class="menu">
+            <li><a th:href="@{/index}" href="#">Главная</a></li>
+            <li><a href="#">Задачи</a></li>
+            <li><a th:href="@{/index}" href="#">О проекте</a></li>
         </ul>
     </div>
     <div class="name">
@@ -26,13 +26,25 @@
     </div>
     <div class="input">
         <label> Введите длину последовательности от 10 до 100</label>
-        <form>
-            <input type="number" placeholder="000" pattern="[0-9]{3}"  maxlength="3"
+        <form th:action="@{/index}" method="POST">
+            <input type="number" name="num" placeholder="000" value="10" pattern="[0-9]{3}" maxlength="3"
                    autofocus="autofocus" required="required"
                    min="10" max="100"
             >
-            <input type="submit" value="Отправить">
+            <input type="submit" value="Сгенерировать">
         </form>
+    </div>
+    <div>
+        <label><h5 th:text="${label}"></h5></label>
+        <h5><span>
+            <span th:each="planet : ${array}">
+               <p>
+                <span th:text="${planet}">
+<!--                    <span th:text="${ch}"></spanth:text>-->
+                </span>
+                </p>
+            </span>
+          </span></h5>
     </div>
 </div>
 </body>
