@@ -1,1 +1,1 @@
-web: java -jar target/TestCGRS-1.0-SNAPSHOT.jar
+web: java -jar TestCGRS-1.0-SNAPSHOT.jar
