@@ -1,1 +1,1 @@
-web: java -jar TestCGRS-1.0-SNAPSHOT.jar
+web: java -jar build/libs/TestCGRS-1.0-SNAPSHOT.jar
